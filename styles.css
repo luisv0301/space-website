@@ -115,7 +115,7 @@ h1 + p {
 a > span {
   font-weight: 600;
 }
-.uppercase{
+.uppercase {
   text-transform: uppercase;
 }
 .home-wrapper {
@@ -174,12 +174,13 @@ a > span {
   border-block-end: 2px solid transparent;
 }
 
-.link--active, .link:hover {
+.link--active,
+.link:hover {
   border-block-end: 2px solid white;
 }
-.nav-button>svg{
-height: 2rem;
-color: white;
+.nav-button > svg {
+  height: 2rem;
+  color: white;
 }
 .close-btn,
 .hambur-menu {
@@ -219,7 +220,23 @@ color: white;
   width: 15rem;
   background: white;
   text-transform: uppercase;
+  position: relative;
+  z-index: 3;
 }
+.cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.25;
+  transition: transform 650ms ease-in;
+}
+.cta:hover::before {
+  transform: scale(1.3);
+}
+
 
 /* Destination page */
 .wrapper {
@@ -237,7 +254,7 @@ color: white;
   align-self: center;
   margin-inline: auto;
 }
-.pages-heading-1--planet{
+.pages-heading-1--planet {
   margin-block-end: 3rem;
 }
 
