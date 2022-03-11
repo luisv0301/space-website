@@ -1,0 +1,660 @@
+/* Reset css */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: sans-serif;
+  color: #d0d6f9;
+  font-size: 1.1rem;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration: none;
+}
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+h1 {
+  font-family: Barlow Condensed, sans-serif;
+  font-size: 1.7rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+h1 > .bigTitle {
+  font-family: Bellefair, sans-serif;
+  font-size: 9rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.pages-heading-1 {
+  font-size: 1.75rem;
+  letter-spacing: 0.3rem;
+}
+.pages-heading-1 > span {
+  opacity: 0.3;
+}
+
+p {
+  font-family: Barlow, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.8;
+}
+h1 + p {
+  margin-block-start: 1rem;
+}
+a > span {
+  font-weight: 600;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+.home-wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr 2fr;
+  height: 100vh;
+  padding: 0 0 4rem 0;
+  background-image: url(assets/home/background-home-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.primary-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+.logo {
+  padding: 0 2rem;
+}
+.line {
+  position: relative;
+  z-index: 2;
+  margin-right: -30px;
+  height: 1px;
+  flex: 1;
+  background-color: hsla(0, 0%, 59%, 0.5);
+}
+.nav-items {
+  padding: 0;
+  margin: 0;
+  color: white;
+  list-style: none;
+  display: flex;
+}
+.nav-items--primary {
+  background: #ffffff1c;
+  padding: 0rem 4rem;
+  backdrop-filter: blur(8px);
+}
+
+.nav-items--secondary > li {
+  padding-block: 0 0.75rem;
+}
+.nav-item:not(:last-child) {
+  margin-inline-end: 2rem;
+}
+.link {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-family: Barlow Condensed, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  padding-block: 2rem;
+  border-block-end: 2px solid transparent;
+}
+
+.link--active, .link:hover {
+  border-block-end: 2px solid white;
+}
+.nav-button>svg{
+height: 2rem;
+color: white;
+}
+.close-btn,
+.hambur-menu {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  display: none;
+  height: 2rem;
+  margin-inline-end: 2rem;
+}
+.close-btn--visible {
+  position: relative;
+  z-index: 5;
+  display: block;
+}
+.header-content {
+  margin-inline: auto;
+  inline-size: min(1069px, 100% - 4rem);
+  color: white;
+  display: flex;
+  grid-row: 3;
+  justify-content: space-between;
+}
+.header-text {
+  max-inline-size: 448px;
+  align-self: end;
+}
+.cta {
+  font-family: Bellefair, sans-serif;
+  font-size: 2rem;
+  align-self: end;
+  color: black;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  width: 15rem;
+  background: white;
+  text-transform: uppercase;
+}
+
+/* Destination page */
+.wrapper {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding-block: 0 2rem;
+  background-image: url(assets/destination/background-destination-desktop.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.planet-main {
+  inline-size: min(1100px, 100% - 4rem);
+  align-self: center;
+  margin-inline: auto;
+}
+.pages-heading-1--planet{
+  margin-block-end: 3rem;
+}
+
+.content-description > h2 {
+  font-size: 100px;
+  font-weight: 400;
+  color: white;
+  font-family: Bellefair, sans-serif;
+}
+.padding-block-end {
+  padding-block: 0 1.5rem;
+}
+.description-group > p {
+  font-family: 14px;
+  letter-spacing: 2.36px;
+}
+.description-group > p > span {
+  font-family: 28px;
+  font-family: Bellefair, sans-serif;
+}
+.content {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+.content-text {
+  display: flex;
+  max-inline-size: 445px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content-text > *:not(:last-child) {
+  margin-block-end: 2.3rem;
+}
+
+.content-description {
+  display: flex;
+  flex: 1;
+  gap: 1.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.description-group {
+  display: flex;
+  padding-block-start: 1rem;
+  border-block-start: 1px solid hsla(0, 0%, 59%, 0.5);
+}
+
+.group > p {
+  color: #d0d6f9;
+  font-family: Barlow Condensed, sans-serif;
+  font-size: 0.9em;
+  font-weight: 200;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.group > span {
+  font-family: Bellefair, sans-serif;
+  font-size: 1.75em;
+  font-weight: 400;
+
+  color: white;
+  margin-top: 0.4em;
+  text-transform: uppercase;
+}
+.group--margin-start {
+  margin-inline-start: 4.8rem;
+}
+
+/* Crew */
+
+.crew-wrapper {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background-image: url(assets/crew/background-crew-desktop.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.crew {
+  display: flex;
+  align-self: end;
+  justify-content: space-between;
+  inline-size: min(1110px, 100% - 4rem);
+  margin-inline: auto;
+}
+.crew-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+  max-block-size: 550px;
+}
+.crew-text {
+  max-inline-size: 488px;
+}
+.crew-text > span {
+  font-size: 32px;
+  text-transform: uppercase;
+  font-family: Bellefair, sans-serif;
+}
+.heading-2 {
+  font-size: 56px;
+  font-family: Bellefair, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.crew-text > p {
+  max-inline-size: 444px;
+}
+.crew-buttons {
+  display: flex;
+  gap: 1.5rem;
+  padding-block: 0 3rem;
+}
+.btn {
+  cursor: pointer;
+  width: 1rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: hsla(0, 0%, 100%, 0.2);
+  border: none;
+}
+
+.crew-img {
+  display: flex;
+  height: 680px;
+  width: auto;
+}
+.crew-img > img {
+  align-self: end;
+}
+
+/* Tech page */
+
+.tech-wrapper {
+  min-block-size: 100vh;
+  background-image: url(assets/technology/background-technology-desktop.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding-block: 0 3rem;
+}
+.tech {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 0.5fr 2fr auto;
+  grid-template-rows: auto 1fr;
+}
+.pages-heading-1--tech {
+  grid-column: 2;
+}
+.tech-content {
+  align-self: center;
+  width: min(585px, 100% - 2rem);
+  display: flex;
+  grid-column: 2;
+  grid-row: 2;
+}
+.tech-img {
+  margin-inline-start: auto;
+  align-self: center;
+  grid-column: 3;
+  grid-row: 2;
+}
+.tech-btns {
+  margin-inline-end: 2rem;
+}
+.tech-btn {
+  color: white;
+  font-size: 32px;
+  font-family: Bellefair, sans-serif;
+  border: 1px solid white;
+  background-color: transparent;
+  width: 80px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.tech-btn:not(:last-child) {
+  margin-block-end: 2rem;
+}
+.btn-active {
+  background-color: white;
+  color: black;
+}
+
+/* ------MEDIA QUERIES------- */
+@media (max-width: 780px) {
+  .pages-heading-1 {
+    font-size: 1.25rem;
+    letter-spacing: 0.2rem;
+  }
+  /* HOME */
+  .home-wrapper {
+    background-image: url(assets/home/background-home-tablet.jpg);
+    grid-template-rows: auto 1fr;
+  }
+  .header-content {
+    text-align: center;
+    flex-direction: column;
+    grid-row: 2;
+    justify-content: unset;
+  }
+  .header-text,
+  .cta {
+    align-self: center;
+  }
+  .header-text {
+    margin-block: 4rem;
+  }
+  .line {
+    display: none;
+  }
+
+  /* DESTINATIONS PAGES */
+  .content {
+    gap: 2rem;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav-items--secondary {
+    justify-content: center;
+  }
+  .description-group {
+    justify-content: space-between;
+  }
+  .group--margin-start {
+    margin-inline-start: 0;
+  }
+  .content-description > h2 {
+    font-size: 80px;
+  }
+
+  .planet-img {
+    max-inline-size: 300px;
+  }
+  .group > p {
+    font-size: 14px;
+  }
+  .group > span {
+    font-size: 28px;
+  }
+
+  /* CREW PAGES */
+
+  .crew {
+    height: 100%;
+    flex-direction: column;
+    align-self: self-start;
+  }
+  .crew-buttons,
+  .crew-text,
+  .crew-img {
+    margin-inline: auto;
+  }
+  .crew-text {
+    max-inline-size: 550px;
+    text-align: center;
+  }
+  .crew-text > p {
+    max-inline-size: unset;
+  }
+  .crew-text > span {
+    font-size: 16px;
+  }
+  .crew-img {
+    max-width: 450px;
+    height: auto;
+  }
+
+  /* TECH PAGES */
+  .tech {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    gap: 3.5rem;
+  }
+  .tech-content {
+    grid-row: 3;
+    text-align: center;
+    flex-direction: column;
+    margin-inline: auto;
+  }
+  .tech-img {
+    grid-row: 2;
+    margin-inline: auto;
+  }
+  .pages-heading-1--tech {
+    grid-row: 1;
+    padding-inline: 2rem;
+  }
+  .tech-img,
+  .tech-content,
+  .pages-heading-1--tech {
+    grid-column: 1;
+  }
+  .tech-btns {
+    margin-inline-end: 0;
+  }
+  .tech-btn:not(:last-child) {
+    margin-inline-end: 2rem;
+  }
+  .tech-btn {
+    font-size: 24px;
+    width: 60px;
+  }
+
+  /* Global styles */
+  .link {
+    font-size: 14px;
+  }
+  .nav-items--primary {
+    padding: 0 3rem;
+  }
+  .heading-2 {
+    font-size: 40px;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  /* HOME */
+  .nav-items--primary {
+    display: none;
+  }
+  .hambur-menu {
+    display: block;
+  }
+  .header-text > h1 {
+    font-size: 1.4rem;
+  }
+  .header-text > h1 > span {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .pages-heading-1 {
+    font-size: 1rem;
+    letter-spacing: 0.17rem;
+    text-align: center;
+  }
+  /* HOME */
+  .home-wrapper {
+    background-image: url(assets/home/background-home-mobile.jpg);
+  }
+  .header-text > h1 > span {
+    font-size: 80px;
+  }
+  .header-text > h1 {
+    font-size: 16px;
+  }
+  .cta {
+    width: 150px;
+    font-size: 20px;
+  }
+
+  /* DESTINATION PAGES */
+  .nav-items--secondary {
+    display: flex;
+  }
+  .content-text > *:not(:last-child) {
+    margin-block-end: 0;
+  }
+  .description-group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .content-description > h2 {
+    font-size: 56px;
+  }
+  .planet-img {
+    max-width: 170px;
+  }
+
+  .planet-main {
+    align-self: start;
+  }
+
+  /* TECH PAGES */
+  .heading-2 {
+    font-size: 24px;
+    padding-block-end: 1rem;
+  }
+  p {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .tech-btn {
+    font-size: 16px;
+    width: 40px;
+  }
+  .tech {
+    gap: 2rem;
+  }
+  .tech-content {
+    align-self: start;
+  }
+}
+
+.nav--visible {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  height: 100%;
+  padding-block-start: 100px;
+}
+.isInactive {
+  display: none;
+}
